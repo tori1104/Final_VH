@@ -1,0 +1,123 @@
+﻿@model DWD278_FinalProject_VH.Models.ToWatchListViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>To Watch List</h1>
+
+<br />
+<h2>Movies</h2>
+<table class="table">
+    <tr>
+        <th>
+           Title
+        </th>
+        <th>
+            Year
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Genre
+        </th>
+        <th>
+            Rating
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Movie)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeStatus.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+   
+
+</table>
+
+
+<h2>Shows</h2>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Year
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Genre
+        </th>
+        <th>
+            Rating
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Show)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeStatus.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+
+
+</table>

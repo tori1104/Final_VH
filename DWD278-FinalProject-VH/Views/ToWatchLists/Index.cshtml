@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DWD278_FinalProject_VH.Models.ToWatchList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    @Html.ActionLink("Add a MOVIE/TV SHOW!", "Create", null, new { @class = "btn btn-info" })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeStatus.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeStatus.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
