@@ -182,6 +182,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ToWatchListContext.mdf" />
+    <Content Include="App_Data\ToWatchListContext_log.ldf">
+      <DependentUpon>ToWatchListContext.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -223,33 +227,26 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ToWatchLists\Create.cshtml" />
     <Content Include="Views\ToWatchLists\Delete.cshtml" />
-    <Content Include="Views\ToWatchLists\Details.cshtml" />
     <Content Include="Views\ToWatchLists\Edit.cshtml" />
     <Content Include="Views\ToWatchLists\Index.cshtml" />
     <Content Include="Views\Genre\Create.cshtml" />
     <Content Include="Views\Genre\Delete.cshtml" />
-    <Content Include="Views\Genre\Details.cshtml" />
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Rating\Create.cshtml" />
     <Content Include="Views\Rating\Delete.cshtml" />
-    <Content Include="Views\Rating\Details.cshtml" />
     <Content Include="Views\Rating\Edit.cshtml" />
     <Content Include="Views\Rating\Index.cshtml" />
     <Content Include="Views\Types\Create.cshtml" />
     <Content Include="Views\Types\Delete.cshtml" />
-    <Content Include="Views\Types\Details.cshtml" />
     <Content Include="Views\Types\Edit.cshtml" />
     <Content Include="Views\Types\Index.cshtml" />
     <Content Include="Views\TypeStatus\Create.cshtml" />
     <Content Include="Views\TypeStatus\Delete.cshtml" />
-    <Content Include="Views\TypeStatus\Details.cshtml" />
     <Content Include="Views\TypeStatus\Edit.cshtml" />
     <Content Include="Views\TypeStatus\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

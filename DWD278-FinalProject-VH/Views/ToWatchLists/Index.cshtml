@@ -4,9 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Add a MOVIE/TV SHOW!", "Create", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Add a MOVIE/TV SHOW!", "Create", null, new { @class = "btn btn-warning" })
 </p>
 
 <table class="table">
@@ -54,7 +55,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

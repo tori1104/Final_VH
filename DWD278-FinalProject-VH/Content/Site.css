@@ -38,3 +38,20 @@ textarea {
     max-width: 280px;
 }
 
+
+/* --------------- CONTACT FORM CSS ----------------------------------------------*/
+.jumbotron {
+background: #008080;
+color: #ffffff;
+border-radius: 0px;
+}
+
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+
+.h1 small {
+font-size: 24px;
+}

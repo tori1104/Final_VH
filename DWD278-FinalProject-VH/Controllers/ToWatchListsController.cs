@@ -21,20 +21,7 @@ namespace DWD278_FinalProject_VH.Controllers
             return View(toWatchList.ToList());
         }
 
-        // GET: ToWatchLists/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ToWatchList toWatchList = db.ToWatchList.Find(id);
-            if (toWatchList == null)
-            {
-                return HttpNotFound();
-            }
-            return View(toWatchList);
-        }
+    
 
         // GET: ToWatchLists/Create
         public ActionResult Create()

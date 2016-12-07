@@ -20,20 +20,7 @@ namespace DWD278_FinalProject_VH.Controllers
             return View(db.Rating.ToList());
         }
 
-        // GET: Rating/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Rating rating = db.Rating.Find(id);
-            if (rating == null)
-            {
-                return HttpNotFound();
-            }
-            return View(rating);
-        }
+   
 
         // GET: Rating/Create
         public ActionResult Create()

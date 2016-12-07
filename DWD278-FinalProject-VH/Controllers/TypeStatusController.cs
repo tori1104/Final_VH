@@ -20,20 +20,7 @@ namespace DWD278_FinalProject_VH.Controllers
             return View(db.TypeStatus.ToList());
         }
 
-        // GET: TypeStatus/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            TypeStatus typeStatus = db.TypeStatus.Find(id);
-            if (typeStatus == null)
-            {
-                return HttpNotFound();
-            }
-            return View(typeStatus);
-        }
+ 
 
         // GET: TypeStatus/Create
         public ActionResult Create()

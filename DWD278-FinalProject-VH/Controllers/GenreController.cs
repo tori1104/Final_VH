@@ -20,20 +20,7 @@ namespace DWD278_FinalProject_VH.Controllers
             return View(db.Genre.ToList());
         }
 
-        // GET: Genre/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Genre genre = db.Genre.Find(id);
-            if (genre == null)
-            {
-                return HttpNotFound();
-            }
-            return View(genre);
-        }
+    
 
         // GET: Genre/Create
         public ActionResult Create()
